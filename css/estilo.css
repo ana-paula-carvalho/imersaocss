@@ -8,11 +8,8 @@ a{
 	text-decoration: none;
 	color: royalblue;
 }
+.contato :active
 a:hover{
-	background-color: royalblue;
-	color: seashell;
-}
-a:target{
 	background-color: royalblue;
 	color: seashell;
 }
@@ -27,8 +24,19 @@ body{
 		font-size: 14px;
 	}
 }	
-.titulo{
+.cabecalho{
 	text-align: center;
+	transform: scale(0.2) translateY(50vh);
+	opacity: 0;
+	animation: 1s linear 2s animacaoCabecalho forwards;/*animação criada abaixo no keyframe*/
+}
+@keyframes animacaoCabecalho{
+	0%{
+
+	}100%{
+		transform: scale(1) translateY(0vh);
+		opacity: 100;
+	}
 }
 header{
 	display: flex;/*Força todas as filhas virarem coluna*/
@@ -37,7 +45,6 @@ header{
 	align-items: center;
 }
 .img-titulo{
-	align-content: center;
 	border-radius: 100%;
 	height: auto;
 	width: 130px;
@@ -47,17 +54,23 @@ header{
 	width: 210px;
 	object-fit: cover;/*corta a imagem*/
 	object-position: center;/*corta em relação ao centro*/
+	transition: transform 0.5s;
+}
+.img-portfolio:hover{
+	transform: scale(1.1) rotate(30deg) ;
 }
 .menu{
 	background-color: white;
 	position: fixed ;
 	top: 0;
 	width: 100vw;
+	z-index: 1;
 }
 .menu a{
 	display: block;
 	font-size: 1.2em;
 	padding: 9px 9vw;
+	transition: background-color 1s, color 1s;/*tudo q vai mudar*/
 }
 .menu li{
 	list-style: none;
@@ -66,13 +79,26 @@ header{
 	display:flex;/*Força todas as filhas virarem coluna*/
 	justify-content:space-around;/*só funciona com o dysplay flex*/
 }
-.portfolio{
+
+.contato a{
+	color: whitesmoke;
+	font-size: 2.5em;
+	transition: text-shadow 0.5s;;
+}
+.contato :active
+.contato a:hover{
+	color: whitesmoke;
+	background-color:black;
+	text-shadow: 0em 0em 20px royalblue;
+}
+.contato, .portfolio{
 	background-color: black;
 	color: royalblue; 
 	padding: 1em 1em;
-	height: 100vh;
+	min-height: 100vh;
+	align-content: center;
 }
-.portfolio h2{
+.contato,.portfolio h2{
 	text-align: center;
 	font-size: 2em;
 	margin-bottom: 1em;
