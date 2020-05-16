@@ -8,8 +8,7 @@ a{
 	text-decoration: none;
 	color: royalblue;
 }
-.contato :active
-a:hover{
+.menu a:hover{
 	background-color: royalblue;
 	color: seashell;
 }
@@ -85,7 +84,7 @@ header{
 	font-size: 2.5em;
 	transition: text-shadow 0.5s;;
 }
-.contato :active
+.contato a:active,
 .contato a:hover{
 	color: whitesmoke;
 	background-color:black;
