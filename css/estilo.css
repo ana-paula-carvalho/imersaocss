@@ -29,6 +29,12 @@ body{
 	opacity: 0;
 	animation: 1s linear 2s animacaoCabecalho forwards;/*animação criada abaixo no keyframe*/
 }
+.img-eu{
+	float: right;
+	margin-left: 1em;
+	width: 10em;
+	clip-path: polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%);/*https://bennettfeely.com/clippy/*/
+}
 @keyframes animacaoCabecalho{
 	0%{
 
@@ -49,15 +55,15 @@ header{
 	width: 130px;
 }
 .img-portfolio{
-	height: auto;
-	width: 210px;
+	height: 210px;
+	width: 100%;
 	object-fit: cover;/*corta a imagem*/
 	object-position: center;/*corta em relação ao centro*/
 	transition: transform 0.5s;
 }
-.img-portfolio:hover{
+/*.img-portfolio:hover{
 	transform: scale(1.1) rotate(30deg) ;
-}
+}*/
 .menu{
 	background-color: white;
 	position: fixed ;
@@ -90,18 +96,37 @@ header{
 	background-color:black;
 	text-shadow: 0em 0em 20px royalblue;
 }
-.contato, .portfolio{
+.sobre,
+.contato, 
+.portfolio{
 	background-color: black;
 	color: royalblue; 
 	padding: 1em 1em;
 	min-height: 100vh;
 	align-content: center;
+	margin-left: auto;
+	margin-right: auto;
 }
-.contato,.portfolio h2{
-	text-align: center;
+@media(min-width:1200px){
+	.container{
+		max-width: 1200px;
+		margin-left: auto;
+		margin-right: auto;
+	}
+}
+.sobre,
+.contato,
+.portfolio h2{
 	font-size: 2em;
-	margin-bottom: 1em;
 	text-shadow: 1.5px 0px white;
+}
+.sobre p{
+	color: whitesmoke;
+	margin-bottom: 1.7;
+	text-indent: 1.7em;
+	text-align: justify;
+	font-size: 0.6em;
+	padding: 10px;
 }
 .portfolio .grid{
 	align-content: center;
@@ -110,7 +135,7 @@ header{
 	height: calc(100vh - 24px );
 	justify-content: center;
 	text-align: center;
-	/*gap: 2em; /*só funciona com o display grid*/
+	gap: 2em; /*só funciona com o display grid*/
 }
 @media(min-width:650px){
 	.portfolio .grid{
@@ -127,6 +152,28 @@ header{
 	.img-portfolio{
 		width: 240px;
 	}
+}
+.card{
+	position: relative;
+	transform-style: preserve-3d;
+	transition: transform 1s;
+}
+.flip-card{
+	perspective: 100em;
+}
+.flip-card:hover .card{/*qundo houver na flip-card a card vai rotacionar*/
+	transform: rotateY(180deg);
+}
+.card-back{
+	background-color: whitesmoke;
+	width: 100%;
+	height: 210px;
+	transform: rotateY(180deg);
+}
+.card-front,
+.card-back{
+	position: absolute;/*sai do fluxo normal da organização do código*/
+	backface-visibility: hidden;/*esconde a parte de tras*/
 }
 .site-subtitle,.site-title{
 	color: whitesmoke;

@@ -12,28 +12,49 @@
 <body>
 	<header>
 		<nav class="menu">
-			<ul>
+			<ul class="container">
 				<li><a href="#sobre">Sobre</a></li>
 				<li><a href="#portfolio">Portifólio</a></li>
 				<li><a href="#contato">Contato</a></li>
 			</ul>
 		</nav>
-		<div class= "cabecalho">
-			<figure>
-				<img class="img-titulo" src="./img/eu.jpg" alt="eCommerce">
-				<figcaption></figcaption>
-			</figure>
-			<h1 class="site-title">Ana Paula Carvalho</h1>
-			<h2 class="site-subtitle">Estudante de Engenharia de Produção</h2>
-		</div>
+		<section class="home" id="home">
+			<div class= "cabecalho">
+				<figure >
+					<img class="img-titulo" src="./img/eu.jpg" alt="eu">
+					<figcaption></figcaption>
+				</figure>
+				<h1 class="site-title">Ana Paula Carvalho</h1>
+				<h2 class="site-subtitle">Estudante de Engenharia de Produção</h2>
+			</div>
+		</section>
 	</header>
-	<section class="portfolio" id="portfolio">
+	<section class="sobre container" id="sobre">
+		<div class="sobrec">
+			<h2>Sobre</h2>
+			<figure class="avatar">
+				<img class="img-eu" src="./img/eu.jpg" alt="eu">
+			</figure>
+			<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum quis, quae doloremque distinctio esse fugiat quo quaerat, perspiciatis illum exercitationem impedit maxime rem, doloribus vitae sapiente perferendis facere hic autem.</p>
+			<p>Sed tempora amet eveniet dolorum minus beatae quae totam incidunt doloribus aperiam, explicabo architecto vel? Omnis similique facilis error, debitis itaque doloribus quod, animi, perferendis perspiciatis nam fuga nesciunt pariatur.</p>
+			<p>Blanditiis, velit deserunt, asperiores, illum quod dolore voluptatem nobis quas necessitatibus rerum voluptate natus nisi? Odit quam veritatis distinctio incidunt, quas obcaecati eius, hic sed qui nisi nobis maxime officia.</p>
+			<p>Este site foi construído durante a <a href="https://www.alura.com.br/imersao-css">Imersão CSS</a> da Alura.</p>
+		</div>
+	</section>
+	<section class="portfolio container" id="portfolio">
 		<!--<h2>Portfólio</h2>-->
 		<div class="grid">
-			<figure>
-				<img class="img-portfolio" src="./img/ecommerce-creditos-s-o-c-i-a-l-c-u-t-unsplash.jpg" alt="eCommerce">
-				<figcaption>eCommerce</figcaption>
-			</figure>
+			<div class="flip-card">
+				<div class="card">
+					<figure class="card-front">
+						<img class="img-portfolio" src="./img/ecommerce-creditos-s-o-c-i-a-l-c-u-t-unsplash.jpg" alt="eCommerce">
+						<figcaption>eCommerce</figcaption>
+					</figure>
+					<div class="card-back">
+						oi eu sou a parte de trás
+					</div>
+				</div>
+			</div>
 			<figure>
 				<img class="img-portfolio" src="./img/mobile-creditos-nate-grant-unsplash.jpg" alt=">Mobile">
 				<figcaption>Mobile</figcaption>
@@ -48,7 +69,7 @@
 			</figure>
 		</div>
 	</section>
-	<section class="contato" id="contato">
+	<section class="contato container" id="contato">
 		<div class="grid-icons">
 			<a target="_blank" href="https://github.com/vanessametonini">
 				<i class="fab fa-github"></i>
